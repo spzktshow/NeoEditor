@@ -1,0 +1,9 @@
+{
+  "actorDefs": [
+    {
+      "actorId": 2000,
+      "name": "冰眼",
+      "sourceId": 20000
+    }
+  ]
+}

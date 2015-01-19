@@ -1,0 +1,37 @@
+{
+  "animationSourceList": [
+    {
+      "sourceId": 20000,
+      "sourceList": [
+        "200000",
+        "200001"
+      ],
+      "animationSourceDefs": [
+        {
+          "frameCount": 8,
+          "animationTag": 10
+        },
+        {
+          "frameCount": 9,
+          "animationTag": 11
+        },
+        {
+          "frameCount": 8,
+          "animationTag": 20
+        },
+        {
+          "frameCount": 4,
+          "animationTag": 30
+        },
+        {
+          "frameCount": 8,
+          "animationTag": 40
+        },
+        {
+          "frameCount": 8,
+          "animationTag": 50
+        }
+      ]
+    }
+  ]
+}

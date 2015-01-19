@@ -1,0 +1,18 @@
+{
+  "campDefs": [
+    {
+      "campId": 7000,
+      "name": "食人魔",
+      "campRelationDefs": [
+        {
+          "campId": 7001,
+          "relationship": -1
+        },
+        {
+          "campId": 7002,
+          "relationship": 2
+        }
+      ]
+    }
+  ]
+}
