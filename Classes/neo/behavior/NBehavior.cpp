@@ -32,7 +32,7 @@ bool CompositeBehaviorNode::execute(neo::BehaviorEvent * behaviorEventValue)
     return false;
 }
 
-CompositeBehaviorNode::CompositeBehaviorNode(char typeValue, cocos2d::Vector<BehaviorNode *> childrenValue):BehaviorNode(typeValue)
+CompositeBehaviorNode::CompositeBehaviorNode(std::string typeValue, cocos2d::Vector<BehaviorNode *> childrenValue):BehaviorNode(typeValue)
 {
     children = childrenValue;
 }
@@ -84,12 +84,6 @@ bool ConditionBehaviorNode::execute(neo::BehaviorEvent * behaviorEventValue)
 }
 
 /************DecoratorBehaviorNode***********/
-DecoratorBehaviorNode::DecoratorBehaviorNode(std::string decoratorTypeValue, BehaviorNode * childValue):BehaviorNode(BehaviorTreeNode::DECORATOR)
-{
-    decoratorType = decoratorTypeValue;
-    child = childValue;
-}
-
 std::string DecoratorBehaviorNode::getDecoratorType()
 {
     return decoratorType;
@@ -98,6 +92,12 @@ std::string DecoratorBehaviorNode::getDecoratorType()
 bool DecoratorBehaviorNode::execute(neo::BehaviorEvent * behaviorEventValue)
 {
     return false;
+}
+
+/************ActionBehaviorNode*************/
+std::string ActionBehaviorNode::getActionType()
+{
+    return actionType;
 }
 
 /******************ConditionBehaviorNode************/

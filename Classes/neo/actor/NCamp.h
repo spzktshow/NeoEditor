@@ -32,7 +32,7 @@ protected:
 class CampDef : public cocos2d::Ref
 {
 public:
-    CampDef(unsigned int campIdValue, cocos2d::Vector<CampRelationDef *> relationValue);
+    CampDef(unsigned int campIdValue, cocos2d::Vector<CampRelationDef *> relationValue, std::string nameValue);
     ~CampDef(){};
     
     unsigned int getCampId();
@@ -41,7 +41,9 @@ public:
     
     CampRelationDef * getCampRelationDefByCampId(unsigned int campIdValue);
     
-    static CampDef * create(unsigned int campIdValue, cocos2d::Vector<CampRelationDef *> relationValue);
+    const cocos2d::Vector<CampRelationDef *> getRelation();
+    
+    static CampDef * create(unsigned int campIdValue, cocos2d::Vector<CampRelationDef *> relationValue, std::string nameValue);
 protected:
     unsigned int campId;
     
@@ -69,6 +71,8 @@ public:
     
     virtual void parse(std::string configData);
     virtual void dispose();
+    
+    CREATE_REF_FUNC(CampConfig);
 protected:
     cocos2d::Vector<CampDef *> campDefs;
 };
@@ -84,11 +88,11 @@ public:
     
     void setRelationship(char relationshipValue);
     char getRelationship();
+    
+    CREATE_REF_FUNC(CampRelationData);
 protected:
     unsigned int campId;
     char relationship;
-    
-    CREATE_REF_FUNC(CampRelationData);
 };
 
 class CampData : public cocos2d::Ref
@@ -101,11 +105,20 @@ public:
     void removeCampRelationData(unsigned int campIdValue);
     void removeCampRelationData(CampRelationData * campRelationDataValue);
     CampRelationData * getCampRelationData(unsigned int campIdValue);
+    
+    CREATE_REF_FUNC(CampData);
 protected:
     unsigned int campId;
     cocos2d::Vector<CampRelationData *> campDatas;
     
     int checkCampRelationData(unsigned int campIdValue);
+};
+
+class CampUtils : public cocos2d::Ref
+{
+public:
+    static CampRelationData * createCampRelationData(CampRelationDef * campRelationDefValue);
+    static CampData * createCampData(CampDef * campDefValue);
 };
 
 NS_N_END;

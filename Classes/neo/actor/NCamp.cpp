@@ -39,15 +39,16 @@ char CampRelationDef::getRelationship()
 }
 
 /***********Camp************/
-CampDef::CampDef(unsigned int campIdValue, cocos2d::Vector<CampRelationDef *> relationValue)
+CampDef::CampDef(unsigned int campIdValue, cocos2d::Vector<CampRelationDef *> relationValue, std::string nameValue)
 {
     campId = campIdValue;
     relation = relationValue;
+    name = nameValue;
 }
 
-CampDef * CampDef::create(unsigned int campIdValue, cocos2d::Vector<CampRelationDef *> relationValue)
+CampDef * CampDef::create(unsigned int campIdValue, cocos2d::Vector<CampRelationDef *> relationValue, std::string nameValue)
 {
-    CampDef * def = new CampDef(campIdValue, relationValue);
+    CampDef * def = new CampDef(campIdValue, relationValue, nameValue);
     if (def)
     {
         def->autorelease();
@@ -55,6 +56,11 @@ CampDef * CampDef::create(unsigned int campIdValue, cocos2d::Vector<CampRelation
     }
     CC_SAFE_DELETE(def);
     return nullptr;
+}
+
+const cocos2d::Vector<CampRelationDef *> CampDef::getRelation()
+{
+    return relation;
 }
 
 unsigned int CampDef::getCampId()
@@ -97,6 +103,7 @@ void CampConfig::parse(std::string configData)
         const rapidjson::Value& campDefV = cocostudio::DictionaryHelper::getInstance()->getDictionaryFromArray_json(jsonDict, CAMP_CONFIG_TAG_CAMPDEFS, i);
         unsigned int campId = cocostudio::DictionaryHelper::getInstance()->getIntValue_json(campDefV, CAMP_CONFIG_TAG_CAMP_ID);
         unsigned int m = cocostudio::DictionaryHelper::getInstance()->getArrayCount_json(campDefV, CAMP_CONFIG_TAG_RELATIONSHIPDEFS);
+        std::string name = cocostudio::DictionaryHelper::getInstance()->getStringValue_json(campDefV, CAMP_COMFIG_TAG_NAME);
         cocos2d::Vector<CampRelationDef *> campRelationDefs;
         for (int j = 0; j < m; j ++) {
             const rapidjson::Value& campRelationDefV = cocostudio::DictionaryHelper::getInstance()->getDictionaryFromArray_json(campDefV, CAMP_CONFIG_TAG_RELATIONSHIPDEFS, j);
@@ -105,7 +112,7 @@ void CampConfig::parse(std::string configData)
             CampRelationDef * campRelationDef = CampRelationDef::create(campRelationId, relationship);
             campRelationDefs.pushBack(campRelationDef);
         }
-        CampDef * campDef = CampDef::create(campId, campRelationDefs);
+        CampDef * campDef = CampDef::create(campId, campRelationDefs, name);
         campDefs.pushBack(campDef);
     }
     ConfigAble::parse(configData);
@@ -142,10 +149,11 @@ void CampRelationData::setCampId(unsigned int campIdValue)
 int CampData::addCampRelationData(neo::CampRelationData *campReleationDataValue)
 {
     int index = checkCampRelationData(campReleationDataValue->getCampId());
-    if (index != -1)
+    if (index == -1)
     {
         campDatas.pushBack(campReleationDataValue);
     }
+    return index;
 }
 
 void CampData::removeCampRelationData(unsigned int campIdValue)
@@ -188,4 +196,24 @@ int CampData::checkCampRelationData(unsigned int campIdValue)
         index ++;
     }
     return -1;
+}
+
+/***********CampUtils*************/
+CampRelationData * CampUtils::createCampRelationData(neo::CampRelationDef *campRelationDefValue)
+{
+    CampRelationData * campRelationData = CampRelationData::create();
+    campRelationData->setCampId(campRelationDefValue->getCampId());
+    campRelationData->setRelationship(campRelationDefValue->getRelationship());
+    return campRelationData;
+}
+
+CampData * CampUtils::createCampData(neo::CampDef *campDefValue)
+{
+    CampData * campData = CampData::create();
+    for (auto campRelationDef : campDefValue->getRelation())
+    {
+        CampRelationData * campRelationData = CampUtils::createCampRelationData(campRelationDef);
+        campData->addCampRelationData(campRelationData);
+    }
+    return campData;
 }

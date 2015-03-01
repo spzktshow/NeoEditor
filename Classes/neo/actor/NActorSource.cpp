@@ -99,3 +99,13 @@ ActorAnimationsSourceDef * ActorAnimationConfig::parseActorAnimationsSourceDef(c
     ActorAnimationsSourceDef * actorAnimationsSourceDef = ActorAnimationsSourceDef::create(sourceId, sourceList, actorAnimationSourceDefs);
     return actorAnimationsSourceDef;
 }
+
+/****************ActorAnimationsSourceData************/
+bool ActorAnimationsSourceData::init()
+{
+    ActorAnimationsSourceDef * actorAnimationsSourceDef = aa;
+    for (ActorAnimationSourceDef * actorAnimationSourceDef : actorAnimationsSourceDef->getAnimationSourceDefs()) {
+        
+    }
+    return true;
+}

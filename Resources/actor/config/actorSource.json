@@ -1,10 +1,10 @@
 {
   "animationSourceList": [
     {
-      "sourceId": 20000,
+      "sourceId": 10000,
       "sourceList": [
-        "200000",
-        "200001"
+        "10000_0",
+        "10000_1"
       ],
       "animationSourceDefs": [
         {

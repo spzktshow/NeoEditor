@@ -1,6 +1,7 @@
 #include "HelloWorldScene.h"
 #include "NConfigManager.h"
 #include "NActorSource.h"
+#include "NCamp.h"
 
 USING_NS_CC;
 
@@ -72,6 +73,11 @@ bool HelloWorld::init()
     neo::ConfigManager * configManager = neo::ConfigManager::getInstance();
     configManager->addConfig(actorAnimationConfig);
     
+    fullPath = cocos2d::FileUtils::getInstance()->fullPathForFilename("camp.json");
+    data = cocos2d::FileUtils::getInstance()->getStringFromFile(fullPath);
+    neo::CampConfig * campConfig = neo::CampConfig::create();
+    campConfig->parse(data);
+    configManager->addConfig(campConfig);
     return true;
 }
 

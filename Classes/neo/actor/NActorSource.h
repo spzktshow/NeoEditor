@@ -42,6 +42,8 @@ public:
         actorSourceDef = nullptr;
     };
     
+    virtual bool init(){return true;};
+    
     const ActorSourceDef * actorSourceDef;
 };
 
@@ -158,9 +160,13 @@ public:
     ActorAnimationsSourceData(ActorAnimationsSourceDef * def):ActorSourceData(def){};
     ~ActorAnimationsSourceData(){};
     
+    virtual bool init();
+    
     cocos2d::Map<std::string, cocos2d::Animate *> animationDic;
     
-    const ActorAnimationsSourceDef * getActorAnimationsSourceDef();
+    ActorAnimationsSourceDef * getActorAnimationsSourceDef();
+    
+    const ActorAnimationsSourceDef * aa;
     
     static ActorAnimationsSourceData * create(ActorAnimationsSourceDef * def)
     {

@@ -25,6 +25,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
+    
+    cocos2d::FileUtils::getInstance()->addSearchPath("actor/");
+    cocos2d::FileUtils::getInstance()->addSearchPath("actor/config/");
+    cocos2d::FileUtils::getInstance()->addSearchPath("actor/source/");
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();

@@ -10,6 +10,7 @@
 #define __NeoEditor__NBehavior__
 
 #include "Neo.h"
+#include "NBehaviorType.h"
 
 NS_N_BEGIN
 
@@ -53,23 +54,11 @@ public:
     CREATE_REF_FUNC(BehaviorExecute);
 };
 
-/***===============行为树=================***/
-enum BehaviorTreeNode
-{
-    COMPOSITE = 0,/*****抽象组合节点****/
-    SEQUENCE,/******顺序节点*****/
-    SELECTOR,/******选择节点*****/
-    PARALLEL,/******并行节点*****/
-    CONDITION,/******条件节点*****/
-    ACTION,/*****抽象动作节点****/
-    DECORATOR/******抽象装饰节点*****/
-};
-
 /****抽象行为节点****/
 class BehaviorNode : public cocos2d::Ref
 {
 public:
-    BehaviorNode(char typeValue){type = typeValue;};
+    BehaviorNode(std::string typeValue){type = typeValue;};
     ~BehaviorNode(){};
     
     virtual bool execute(BehaviorEvent *);
@@ -78,14 +67,14 @@ public:
     std::string nodeName;
 #endif
 protected:
-    char type;
+    std::string type;
 };
 
 /*******抽象组合节点**********/
 class CompositeBehaviorNode : public BehaviorNode
 {
 public:
-    CompositeBehaviorNode(char typeValue, cocos2d::Vector<BehaviorNode *> childrenValue);
+    CompositeBehaviorNode(std::string typeValue, cocos2d::Vector<BehaviorNode *> childrenValue);
     ~CompositeBehaviorNode(){};
     
     virtual bool execute(BehaviorEvent *);
@@ -97,7 +86,7 @@ protected:
 class SequenceBehaviorNode : public CompositeBehaviorNode
 {
 public:
-    SequenceBehaviorNode(cocos2d::Vector<BehaviorNode *> childrenValue):CompositeBehaviorNode(BehaviorTreeNode::SEQUENCE, childrenValue){};
+    SequenceBehaviorNode(cocos2d::Vector<BehaviorNode *> childrenValue):CompositeBehaviorNode(BehaviorTreeNode_sequence, childrenValue){};
     ~SequenceBehaviorNode(){};
     
     virtual bool execute(BehaviorEvent *);
@@ -112,14 +101,14 @@ public:
         }
         CC_SAFE_DELETE(behaviorNode);
         return nullptr;
-    }
+    };
 };
 
 /**********选择节点***********/
 class SelectorBehaviorNode : public CompositeBehaviorNode
 {
 public:
-    SelectorBehaviorNode(cocos2d::Vector<BehaviorNode *> childrenValue):CompositeBehaviorNode(BehaviorTreeNode::SELECTOR, childrenValue){};
+    SelectorBehaviorNode(cocos2d::Vector<BehaviorNode *> childrenValue):CompositeBehaviorNode(BehaviorTreeNode_selector, childrenValue){};
     ~SelectorBehaviorNode(){};
     
     virtual bool execute(BehaviorEvent *);
@@ -134,14 +123,14 @@ public:
         }
         CC_SAFE_DELETE(behaviorNode);
         return nullptr;
-    }
+    };
 };
 
 /**********并行节点**********/
 class ParallelBehaviorNode : public CompositeBehaviorNode
 {
 public:
-    ParallelBehaviorNode(cocos2d::Vector<BehaviorNode *> childrenValue):CompositeBehaviorNode(BehaviorTreeNode::PARALLEL, childrenValue){};
+    ParallelBehaviorNode(cocos2d::Vector<BehaviorNode *> childrenValue):CompositeBehaviorNode(BehaviorTreeNode_parallel, childrenValue){};
     ~ParallelBehaviorNode(){};
     
     virtual bool execute(BehaviorEvent *);
@@ -156,14 +145,14 @@ public:
         }
         CC_SAFE_DELETE(behaviorNode);
         return nullptr;
-    }
+    };
 };
 
 /***********条件节点*********/
 class ConditionBehaviorNode : public BehaviorNode
 {
 public:
-    ConditionBehaviorNode(std::string conditionTypeValue):BehaviorNode(BehaviorTreeNode::CONDITION){conditionType = conditionTypeValue;};
+    ConditionBehaviorNode(std::string conditionTypeValue):BehaviorNode(BehaviorTreeNode_condition){conditionType = conditionTypeValue;};
     ~ConditionBehaviorNode(){};
     
     std::string getConditionType();
@@ -177,7 +166,7 @@ protected:
 class DecoratorBehaviorNode : public BehaviorNode
 {
 public:
-    DecoratorBehaviorNode(std::string decoratorTypeValue, BehaviorNode * childValue);
+    DecoratorBehaviorNode(std::string decoratorTypeValue, BehaviorNode * childValue):BehaviorNode(BehaviorTreeNode_decorator), decoratorType(decoratorTypeValue), child(childValue){};
     ~DecoratorBehaviorNode(){};
     
     std::string getDecoratorType();
@@ -189,13 +178,24 @@ protected:
     BehaviorNode * child;
 };
 
+/************行为节点************/
+class ActionBehaviorNode : public BehaviorNode
+{
+public:
+    ActionBehaviorNode(std::string actionTypeValue):BehaviorNode(BehaviorTreeNode_action), actionType(actionTypeValue){};
+    ~ActionBehaviorNode(){};
+    
+    std::string getActionType();
+protected:
+    std::string actionType;
+};
+
 /*************campareEventType ConditionBehaviorNode*****/
 #define CONDITION_CAMPARE_EVENT_TYPE                "campareEventType"
 class ConditionBehaviorNodeCampareEventType : public ConditionBehaviorNode
 {
 public:
-    ConditionBehaviorNodeCampareEventType(std::string campareEventTypeValue):ConditionBehaviorNode(CONDITION_CAMPARE_EVENT_TYPE){
-        campareEventType = campareEventTypeValue;
+    ConditionBehaviorNodeCampareEventType(std::string campareEventTypeValue):ConditionBehaviorNode(CONDITION_CAMPARE_EVENT_TYPE), campareEventType(campareEventTypeValue){
     };
     ~ConditionBehaviorNodeCampareEventType(){};
     
@@ -211,7 +211,7 @@ public:
         }
         CC_SAFE_DELETE(behaviorNode);
         return nullptr;
-    }
+    };
 protected:
     std::string campareEventType;
 };
@@ -236,7 +236,7 @@ public:
         }
         CC_SAFE_DELETE(behaviorNode);
         return nullptr;
-    }
+    };
 };
 
 NS_N_END;

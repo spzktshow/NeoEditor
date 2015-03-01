@@ -16,7 +16,7 @@ NS_N_BEGIN
 class StateData : public cocos2d::Node
 {
 public:
-    StateData(){};
+    StateData(std::string stateTypeValue):stateType(stateTypeValue){};
     virtual ~StateData(){};
     
     virtual void start();/****启动状态****/
@@ -28,24 +28,38 @@ public:
     bool isStateStart();/*******检测状态是否已经启动******/
     bool isStateComplete();/******检测状态是否已经完成******/
     
-    CREATE_FUNC(StateData);
+    std::string getStateType();
+    
+    static StateData * create(std::string stateTypeValue)
+    {
+        StateData * stateData = new StateData(stateTypeValue);
+        if (stateData && stateData->init())
+        {
+            stateData->autorelease();
+            return stateData;
+        }
+        CC_SAFE_DELETE(stateData);
+        return nullptr;
+    };
 protected:
     bool stateRunning;
     bool stateStart;
     bool stateComplete;
+    
+    std::string stateType;
 };
 
 class StateOperationData : public StateData
 {
 public:
-    StateOperationData(std::string operationTypeValue):operationType(operationTypeValue){};
+    StateOperationData(std::string stateTypeValue, std::string operationTypeValue):StateData(stateTypeValue),operationType(operationTypeValue){};
     virtual ~StateOperationData(){};
     
     std::string getOperationType();
     
-    static StateOperationData * create(std::string operationTypeValue)
+    static StateOperationData * create(std::string stateTypeValue, std::string operationTypeValue)
     {
-        StateOperationData * stateOperationData = StateOperationData::create(operationTypeValue);
+        StateOperationData * stateOperationData = new StateOperationData(stateTypeValue, operationTypeValue);
         if (stateOperationData && stateOperationData->init())
         {
             stateOperationData->autorelease();

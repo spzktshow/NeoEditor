@@ -17,10 +17,9 @@ NS_N_BEGIN
 class ActorDef : public cocos2d::Ref
 {
 public:
-    ActorDef():sourceDef(nullptr), campDef(nullptr){};
+    ActorDef():sourceDef(nullptr){};
     ~ActorDef(){
         sourceDef = nullptr;
-        campDef = nullptr;
     };
     /***id***/
     unsigned int actorId;
@@ -29,9 +28,6 @@ public:
     /****source*****/
     const ActorSourceDef * sourceDef;
     
-    /****camp******/
-    const CampDef * campDef;
-    
     CREATE_REF_FUNC(ActorDef);
 };
 
@@ -39,13 +35,20 @@ public:
 class ActorData : public cocos2d::Ref
 {
 public:
-    ActorData(ActorDef * actorDefValue):actorDef(actorDefValue), actorSourceData(nullptr){};
+    ActorData(ActorDef * actorDefValue):actorDef(actorDefValue), actorSourceData(nullptr), campData(nullptr){};
     ~ActorData(){
         actorDef = nullptr;
         
         if (actorSourceData != nullptr)
         {
             actorSourceData->release();
+            actorSourceData = nullptr;
+        }
+        
+        if (campData != nullptr)
+        {
+            campData->release();
+            campData = nullptr;
         }
     };
     
@@ -62,12 +65,29 @@ public:
         actorSourceData->retain();
     };
     
-    const ActorSourceData * getActorSourceData()
+    ActorSourceData * getActorSourceData()
     {
         return actorSourceData;
     };
+    
+    void setCampData(CampData * campDataValue)
+    {
+        if (campData)
+        {
+            campData->release();
+        }
+        campData = campDataValue;
+        if (!campData) return;
+        campData->retain();
+    };
+    
+    CampData * getCampData()
+    {
+        return campData;
+    };
 protected:
     ActorSourceData * actorSourceData;
+    CampData * campData;
 };
 
 NS_N_END;

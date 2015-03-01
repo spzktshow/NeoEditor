@@ -66,10 +66,12 @@
 		644739071A46599F00DC9B42 /* NConfigAble.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 644739041A46599F00DC9B42 /* NConfigAble.cpp */; };
 		6447390A1A465A0500DC9B42 /* NActorSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 644739081A465A0500DC9B42 /* NActorSource.cpp */; };
 		6447390B1A465A0500DC9B42 /* NActorSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 644739081A465A0500DC9B42 /* NActorSource.cpp */; };
-		646A6E501A65EAC20096F2AA /* actorConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 646A6E4E1A65EAC20096F2AA /* actorConfig.json */; };
-		646A6E511A65EAC20096F2AA /* actorConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 646A6E4E1A65EAC20096F2AA /* actorConfig.json */; };
-		646A6E521A65EAC20096F2AA /* camp.json in Resources */ = {isa = PBXBuildFile; fileRef = 646A6E4F1A65EAC20096F2AA /* camp.json */; };
-		646A6E531A65EAC20096F2AA /* camp.json in Resources */ = {isa = PBXBuildFile; fileRef = 646A6E4F1A65EAC20096F2AA /* camp.json */; };
+		64D35CB61A9986F100B06D47 /* actor in Resources */ = {isa = PBXBuildFile; fileRef = 64D35CB51A9986F000B06D47 /* actor */; };
+		64D35CB71A9986F100B06D47 /* actor in Resources */ = {isa = PBXBuildFile; fileRef = 64D35CB51A9986F000B06D47 /* actor */; };
+		64D6A0C91A99A0E700110AAA /* ActorActionBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64D6A0C71A99A0E700110AAA /* ActorActionBehavior.cpp */; };
+		64D6A0CA1A99A0E700110AAA /* ActorActionBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64D6A0C71A99A0E700110AAA /* ActorActionBehavior.cpp */; };
+		64D6A0CD1A99A20000110AAA /* ActorActionState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64D6A0CB1A99A20000110AAA /* ActorActionState.cpp */; };
+		64D6A0CE1A99A20000110AAA /* ActorActionState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64D6A0CB1A99A20000110AAA /* ActorActionState.cpp */; };
 		64E9CC391A218E930099A94D /* NActor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E9CC2C1A218E930099A94D /* NActor.cpp */; };
 		64E9CC3A1A218E930099A94D /* NActor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E9CC2C1A218E930099A94D /* NActor.cpp */; };
 		64E9CC3D1A218E930099A94D /* NCamp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E9CC301A218E930099A94D /* NCamp.cpp */; };
@@ -78,16 +80,6 @@
 		64E9CC401A218E930099A94D /* NBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E9CC331A218E930099A94D /* NBehavior.cpp */; };
 		64E9CC411A218E930099A94D /* NState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E9CC371A218E930099A94D /* NState.cpp */; };
 		64E9CC421A218E930099A94D /* NState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64E9CC371A218E930099A94D /* NState.cpp */; };
-		64E9CC4A1A21ACF10099A94D /* 200000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64E9CC461A21ACF10099A94D /* 200000.plist */; };
-		64E9CC4B1A21ACF10099A94D /* 200000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64E9CC461A21ACF10099A94D /* 200000.plist */; };
-		64E9CC4C1A21ACF10099A94D /* 200000.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E9CC471A21ACF10099A94D /* 200000.png */; };
-		64E9CC4D1A21ACF10099A94D /* 200000.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E9CC471A21ACF10099A94D /* 200000.png */; };
-		64E9CC4E1A21ACF10099A94D /* 200001.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64E9CC481A21ACF10099A94D /* 200001.plist */; };
-		64E9CC4F1A21ACF10099A94D /* 200001.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64E9CC481A21ACF10099A94D /* 200001.plist */; };
-		64E9CC501A21ACF10099A94D /* 200001.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E9CC491A21ACF10099A94D /* 200001.png */; };
-		64E9CC511A21ACF10099A94D /* 200001.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E9CC491A21ACF10099A94D /* 200001.png */; };
-		64F4B27A1A344B9C00353AB4 /* actorSource.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F4B2791A344B9C00353AB4 /* actorSource.json */; };
-		64F4B27B1A344B9C00353AB4 /* actorSource.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F4B2791A344B9C00353AB4 /* actorSource.json */; };
 		64F4B2871A34731200353AB4 /* MSGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B2831A34731200353AB4 /* MSGeometry.cpp */; };
 		64F4B2881A34731200353AB4 /* MSGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B2831A34731200353AB4 /* MSGeometry.cpp */; };
 		64F4B2891A34731200353AB4 /* TypeConver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B2851A34731200353AB4 /* TypeConver.cpp */; };
@@ -292,12 +284,16 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		640943F81A7CADF000ADB92D /* NBehaviorType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBehaviorType.h; sourceTree = "<group>"; };
 		644739041A46599F00DC9B42 /* NConfigAble.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NConfigAble.cpp; sourceTree = "<group>"; };
 		644739051A46599F00DC9B42 /* NConfigAble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NConfigAble.h; sourceTree = "<group>"; };
 		644739081A465A0500DC9B42 /* NActorSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NActorSource.cpp; sourceTree = "<group>"; };
 		644739091A465A0500DC9B42 /* NActorSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NActorSource.h; sourceTree = "<group>"; };
-		646A6E4E1A65EAC20096F2AA /* actorConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = actorConfig.json; sourceTree = "<group>"; };
-		646A6E4F1A65EAC20096F2AA /* camp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camp.json; sourceTree = "<group>"; };
+		64D35CB51A9986F000B06D47 /* actor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = actor; sourceTree = "<group>"; };
+		64D6A0C71A99A0E700110AAA /* ActorActionBehavior.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActorActionBehavior.cpp; sourceTree = "<group>"; };
+		64D6A0C81A99A0E700110AAA /* ActorActionBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorActionBehavior.h; sourceTree = "<group>"; };
+		64D6A0CB1A99A20000110AAA /* ActorActionState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActorActionState.cpp; sourceTree = "<group>"; };
+		64D6A0CC1A99A20000110AAA /* ActorActionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorActionState.h; sourceTree = "<group>"; };
 		64E9CC2C1A218E930099A94D /* NActor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NActor.cpp; sourceTree = "<group>"; };
 		64E9CC2D1A218E930099A94D /* NActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NActor.h; sourceTree = "<group>"; };
 		64E9CC301A218E930099A94D /* NCamp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NCamp.cpp; sourceTree = "<group>"; };
@@ -307,11 +303,6 @@
 		64E9CC351A218E930099A94D /* Neo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neo.h; sourceTree = "<group>"; };
 		64E9CC371A218E930099A94D /* NState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NState.cpp; sourceTree = "<group>"; };
 		64E9CC381A218E930099A94D /* NState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NState.h; sourceTree = "<group>"; };
-		64E9CC461A21ACF10099A94D /* 200000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 200000.plist; sourceTree = "<group>"; };
-		64E9CC471A21ACF10099A94D /* 200000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 200000.png; sourceTree = "<group>"; };
-		64E9CC481A21ACF10099A94D /* 200001.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 200001.plist; sourceTree = "<group>"; };
-		64E9CC491A21ACF10099A94D /* 200001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 200001.png; sourceTree = "<group>"; };
-		64F4B2791A344B9C00353AB4 /* actorSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = actorSource.json; sourceTree = "<group>"; };
 		64F4B2801A34700100353AB4 /* NFileFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFileFormat.h; sourceTree = "<group>"; };
 		64F4B2821A34731200353AB4 /* moonSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moonSugar.h; sourceTree = "<group>"; };
 		64F4B2831A34731200353AB4 /* MSGeometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSGeometry.cpp; sourceTree = "<group>"; };
@@ -515,6 +506,24 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		64D6A0C31A99A09100110AAA /* actor */ = {
+			isa = PBXGroup;
+			children = (
+				64D6A0C71A99A0E700110AAA /* ActorActionBehavior.cpp */,
+				64D6A0C81A99A0E700110AAA /* ActorActionBehavior.h */,
+				64D6A0CB1A99A20000110AAA /* ActorActionState.cpp */,
+				64D6A0CC1A99A20000110AAA /* ActorActionState.h */,
+			);
+			path = actor;
+			sourceTree = "<group>";
+		};
+		64D6A0C61A99A09700110AAA /* behavior */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = behavior;
+			sourceTree = "<group>";
+		};
 		64E9CC2A1A218E930099A94D /* neo */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +555,7 @@
 			children = (
 				64E9CC331A218E930099A94D /* NBehavior.cpp */,
 				64E9CC341A218E930099A94D /* NBehavior.h */,
+				640943F81A7CADF000ADB92D /* NBehaviorType.h */,
 			);
 			path = behavior;
 			sourceTree = "<group>";
@@ -559,35 +569,15 @@
 			path = state;
 			sourceTree = "<group>";
 		};
-		64E9CC451A21ACF10099A94D /* actor */ = {
-			isa = PBXGroup;
-			children = (
-				64F4B2781A344B9C00353AB4 /* config */,
-				64E9CC461A21ACF10099A94D /* 200000.plist */,
-				64E9CC471A21ACF10099A94D /* 200000.png */,
-				64E9CC481A21ACF10099A94D /* 200001.plist */,
-				64E9CC491A21ACF10099A94D /* 200001.png */,
-			);
-			path = actor;
-			sourceTree = "<group>";
-		};
 		64F4B2751A343C5100353AB4 /* game */ = {
 			isa = PBXGroup;
 			children = (
+				64D6A0C61A99A09700110AAA /* behavior */,
+				64D6A0C31A99A09100110AAA /* actor */,
 				64F4B27C1A346F1200353AB4 /* core */,
 			);
 			name = game;
 			path = ../Classes/game;
-			sourceTree = "<group>";
-		};
-		64F4B2781A344B9C00353AB4 /* config */ = {
-			isa = PBXGroup;
-			children = (
-				646A6E4E1A65EAC20096F2AA /* actorConfig.json */,
-				646A6E4F1A65EAC20096F2AA /* camp.json */,
-				64F4B2791A344B9C00353AB4 /* actorSource.json */,
-			);
-			path = config;
 			sourceTree = "<group>";
 		};
 		64F4B27C1A346F1200353AB4 /* core */ = {
@@ -625,7 +615,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				64E9CC451A21ACF10099A94D /* actor */,
+				64D35CB51A9986F000B06D47 /* actor */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -798,10 +788,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64E9CC4A1A21ACF10099A94D /* 200000.plist in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
-				64E9CC4C1A21ACF10099A94D /* 200000.png in Resources */,
+				64D35CB61A9986F100B06D47 /* actor in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
@@ -810,18 +799,13 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
-				64E9CC501A21ACF10099A94D /* 200001.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
-				646A6E501A65EAC20096F2AA /* actorConfig.json in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
-				64F4B27A1A344B9C00353AB4 /* actorSource.json in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
-				646A6E521A65EAC20096F2AA /* camp.json in Resources */,
-				64E9CC4E1A21ACF10099A94D /* 200001.plist in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
@@ -831,15 +815,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F4B27B1A344B9C00353AB4 /* actorSource.json in Resources */,
-				646A6E531A65EAC20096F2AA /* camp.json in Resources */,
-				64E9CC511A21ACF10099A94D /* 200001.png in Resources */,
-				64E9CC4B1A21ACF10099A94D /* 200000.plist in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
-				64E9CC4D1A21ACF10099A94D /* 200000.png in Resources */,
-				64E9CC4F1A21ACF10099A94D /* 200001.plist in Resources */,
-				646A6E511A65EAC20096F2AA /* actorConfig.json in Resources */,
+				64D35CB71A9986F100B06D47 /* actor in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
 			);
@@ -860,10 +838,12 @@
 				644739061A46599F00DC9B42 /* NConfigAble.cpp in Sources */,
 				64F4B2891A34731200353AB4 /* TypeConver.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				64D6A0C91A99A0E700110AAA /* ActorActionBehavior.cpp in Sources */,
 				64F4B2871A34731200353AB4 /* MSGeometry.cpp in Sources */,
 				6447390A1A465A0500DC9B42 /* NActorSource.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				64F4B28E1A3476DC00353AB4 /* NConfigManager.cpp in Sources */,
+				64D6A0CD1A99A20000110AAA /* ActorActionState.cpp in Sources */,
 				64E9CC411A218E930099A94D /* NState.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 			);
@@ -878,10 +858,12 @@
 				64F4B2881A34731200353AB4 /* MSGeometry.cpp in Sources */,
 				64E9CC421A218E930099A94D /* NState.cpp in Sources */,
 				64F4B28A1A34731200353AB4 /* TypeConver.cpp in Sources */,
+				64D6A0CE1A99A20000110AAA /* ActorActionState.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				64E9CC401A218E930099A94D /* NBehavior.cpp in Sources */,
 				644739071A46599F00DC9B42 /* NConfigAble.cpp in Sources */,
 				64E9CC3A1A218E930099A94D /* NActor.cpp in Sources */,
+				64D6A0CA1A99A0E700110AAA /* ActorActionBehavior.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				64E9CC3E1A218E930099A94D /* NCamp.cpp in Sources */,
 				64F4B28F1A3476DC00353AB4 /* NConfigManager.cpp in Sources */,

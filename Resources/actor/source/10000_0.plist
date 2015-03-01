@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>20000_10_0004.png</key>
+            <key>10000_10_0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{296,132}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_10_0005.png</key>
+            <key>10000_10_0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,136},{272,138}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_10_0006.png</key>
+            <key>10000_10_0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,276},{254,140}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_10_0007.png</key>
+            <key>10000_10_0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{300,2},{272,148}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_11_0001.png</key>
+            <key>10000_11_0001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{844,176},{174,154}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_11_0003.png</key>
+            <key>10000_11_0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{478,590},{220,152}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_11_0004.png</key>
+            <key>10000_11_0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{258,366},{246,154}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_11_0005.png</key>
+            <key>10000_11_0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{788,332},{232,156}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_11_0006.png</key>
+            <key>10000_11_0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{788,810},{210,156}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_20_0000.png</key>
+            <key>10000_20_0000.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{744,490},{220,156}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_20_0003.png</key>
+            <key>10000_20_0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,418},{236,152}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_20_0004.png</key>
+            <key>10000_20_0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{574,2},{268,206}}</string>
@@ -160,7 +160,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_20_0005.png</key>
+            <key>10000_20_0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{276,152},{262,212}}</string>
@@ -173,7 +173,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_20_0006.png</key>
+            <key>10000_20_0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{540,210},{246,224}}</string>
@@ -186,7 +186,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_20_0007.png</key>
+            <key>10000_20_0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,572},{214,230}}</string>
@@ -199,7 +199,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_30_0000.png</key>
+            <key>10000_30_0000.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{306,674},{198,164}}</string>
@@ -212,7 +212,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_30_0002.png</key>
+            <key>10000_30_0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{844,2},{172,178}}</string>
@@ -225,7 +225,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_40_0004.png</key>
+            <key>10000_40_0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{488,744},{218,156}}</string>
@@ -238,7 +238,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_40_0007.png</key>
+            <key>10000_40_0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{788,648},{216,160}}</string>
@@ -251,7 +251,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_50_0002.png</key>
+            <key>10000_50_0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{240,522},{236,150}}</string>
@@ -264,7 +264,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_50_0003.png</key>
+            <key>10000_50_0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{506,436},{236,152}}</string>
@@ -277,7 +277,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_50_0004.png</key>
+            <key>10000_50_0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,788},{230,156}}</string>
@@ -290,7 +290,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_50_0005.png</key>
+            <key>10000_50_0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{160,788},{228,144}}</string>
@@ -303,7 +303,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_50_0006.png</key>
+            <key>10000_50_0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{646,744},{218,140}}</string>
@@ -316,7 +316,7 @@
                 <key>sourceSize</key>
                 <string>{490,490}</string>
             </dict>
-            <key>20000_50_0007.png</key>
+            <key>10000_50_0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{306,874},{180,148}}</string>
@@ -335,13 +335,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>200000.png</string>
+            <string>10000_0.png</string>
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:3699bcd3901dd2dae7c21e7482fdedf1:1/2$</string>
+            <string>$TexturePacker:SmartUpdate:4e0fa7d4d555867dcc95f731a2b02879:1/2$</string>
             <key>textureFileName</key>
-            <string>200000.png</string>
+            <string>10000_0.png</string>
         </dict>
     </dict>
 </plist>
