@@ -166,8 +166,6 @@ public:
     
     ActorAnimationsSourceDef * getActorAnimationsSourceDef();
     
-    const ActorAnimationsSourceDef * aa;
-    
     static ActorAnimationsSourceData * create(ActorAnimationsSourceDef * def)
     {
         ActorAnimationsSourceData * data = new ActorAnimationsSourceData(def);

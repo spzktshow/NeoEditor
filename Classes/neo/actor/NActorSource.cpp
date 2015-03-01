@@ -103,9 +103,5 @@ ActorAnimationsSourceDef * ActorAnimationConfig::parseActorAnimationsSourceDef(c
 /****************ActorAnimationsSourceData************/
 bool ActorAnimationsSourceData::init()
 {
-    ActorAnimationsSourceDef * actorAnimationsSourceDef = aa;
-    for (ActorAnimationSourceDef * actorAnimationSourceDef : actorAnimationsSourceDef->getAnimationSourceDefs()) {
-        
-    }
     return true;
 }
